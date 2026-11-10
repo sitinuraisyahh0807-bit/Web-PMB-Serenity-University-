@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1A46A0, #0A2463); /* Latar biru khas desain */
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR (Sama dengan Beranda) ================= */
+.main-header {
+    background: #bfa88c; 
+    position: relative;
+    z-index: 999;
+}
+
+.navbar {
+    min-height: 90px;
+    padding: 5px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #12304E;
+    line-height: 1.1;
+}
+
+.brand-text .line-serenity,
+.brand-text .line-university {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin: 0;
+}
+
+.nav-menu a {
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #12304E;
+}
+
+.login-btn {
+    background-color: #12304E;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #1a446f;
+}
+
+/* ================= WRAPPER & CARDS ================= */
+.detail-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Tombol Kembali */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 0.8;
+}
+
+/* Penambahan margin-bottom agar card bertumpuk dengan rapi */
+.detail-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 50px; 
+}
+
+.card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 45px;
+}
+
+/* Kolom Kiri */
+.col-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.program-title {
+    color: #12304E; 
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.program-badge {
+    align-self: flex-start;
+    background-color: #E8F0FE;
+    color: #2864E8;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.program-desc {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 90%;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #EAEAEA;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    color: #12304E;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #666;
+    font-size: 13.5px;
+    margin-bottom: 12px;
+}
+
+.features-list li i {
+    color: #2864E8; 
+    font-size: 16px;
+}
+
+/* Kolom Kanan */
+.col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.program-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.info-box {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #E2E8F0;
+    font-size: 13px;
+}
+
+.info-row.border-none {
+    border-bottom: none;
+}
+
+.info-label {
+    color: #12304E;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-label i {
+    color: #2864E8;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.info-value {
+    color: #555;
+    font-weight: 500;
+}
+
+.akreditasi-a {
+    color: #D99A29;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/* Footer Card (Hanya ada di S1 sesuai request, jika mau ditambahkan ke yang lain, copy HTMLnya) */
+.card-footer {
+    background-color: #F4F7FF; 
+    padding: 25px 45px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.footer-title {
+    color: #2864E8;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-pills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.pills-wrapper {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    background-color: #FFFFFF;
+    border: 1px solid #D1DDF5;
+    color: #4A5568;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.pill i {
+    color: #2864E8;
+}
+
+.lihat-semua {
+    color: #4A5568;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.lihat-semua:hover {
+    color: #2864E8;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+    .card-body {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-pills-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .lihat-semua {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
+
+/* 1. Sembunyikan semua card saat halaman pertama dimuat */
+.detail-card {
+    display: none !important;
+}
+
+/* 2. Hanya munculkan card yang nama ID-nya ada di link URL (#diploma, dll) */
+.detail-card:target {
+    display: block !important;
+}
+
+/* 3. Sebagai perlindungan, JIKA file ini dibuka langsung tanpa mengklik # apa-apa, maka paksa tampilkan card Sarjana sebagai bawaan */
+:root:not(:has(:target)) #sarjana {
+    display: block !important;
+}
+
+/* ===== NAVBAR SERAGAM & STICKY ===== */
+html { scroll-padding-top: 90px; }
+.main-header, body > header:first-of-type {
+    position: sticky !important;
+    top: 0;
+    z-index: 9999;
+    background: #c7b093 !important;
+    box-shadow: 0 3px 14px rgba(0,0,0,.10);
+}
+.navbar {
+    min-height: 90px !important;
+    height: 90px;
+    padding: 5px 25px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.brand { display:flex !important; align-items:center !important; gap:14px !important; }
+.brand img { width:85px !important; height:75px !important; object-fit:contain !important; }
+.brand-text { display:flex !important; flex-direction:column !important; }
+.brand-text h2 { margin:0 !important; line-height:1 !important; font-family:Georgia,serif !important; font-size:28px !important; color:#163d67 !important; }
+.nav-right { display:flex !important; align-items:center !important; gap:35px !important; }
+.nav-menu { display:flex !important; align-items:center !important; gap:28px !important; }
+.nav-menu a { font-size:15px !important; color:#fff !important; font-family:Arial,sans-serif !important; text-decoration:none !important; padding-bottom:4px !important; transition:.3s !important; }
+.nav-menu a:hover, .nav-menu a.active { color:#163d67 !important; }
+.nav-menu a.active { border-bottom:2px solid #163d67 !important; }
+.login-btn {
+    background:#163d67 !important; color:#fff !important; padding:10px 18px !important;
+    border-radius:8px !important; font-size:14px !important; text-decoration:none !important;
+    display:inline-flex !important; align-items:center; gap:7px; transition:.3s !important;
+}
+.login-btn:hover { background:#102f50 !important; transform:translateY(-2px); }
+@media (max-width:650px) {
+    .navbar { height:auto !important; min-height:auto !important; padding:12px 18px !important; flex-direction:column !important; gap:12px !important; }
+    .brand img { width:65px !important; height:60px !important; }
+    .brand-text h2 { font-size:22px !important; }
+    .nav-right { flex-direction:column !important; gap:12px !important; }
+    .nav-menu { flex-wrap:wrap !important; justify-content:center !important; gap:12px 18px !important; }
+    .nav-menu a { font-size:13px !important; }
+}

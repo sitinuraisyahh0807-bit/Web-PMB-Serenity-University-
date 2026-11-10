@@ -1,0 +1,421 @@
+
+/* ========================================
+   SERENITY UNIVERSITY — APPLICATION CSS
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body.app {
+    margin: 0;
+    background: #f4f6fb;
+    color: #1e293b;
+    font: 15px/1.5 Arial, sans-serif;
+}
+
+.app a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Layout utama */
+
+.app .layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.app .sidebar {
+    flex: 0 0 250px;
+    padding: 24px 18px;
+    background: #102b50;
+    color: #fff;
+}
+
+.app .brand {
+    margin-bottom: 28px;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.app .nav a {
+    display: block;
+    margin: 4px 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: #dce6f5;
+}
+
+.app .nav a:hover,
+.app .nav a.active {
+    background: #24456f;
+    color: #fff;
+}
+
+.app .main {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Header dan konten */
+
+.app .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 28px;
+    background: #fff;
+    box-shadow: 0 2px 10px #12294b0d;
+}
+
+.app .content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 28px;
+}
+
+.app h1 {
+    margin: 0 0 6px;
+    font-size: 27px;
+}
+
+.app h2 {
+    margin-top: 0;
+}
+
+.app .muted {
+    color: #6b7280;
+}
+
+/* Kartu dan panel */
+
+.app .cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.app .stat,
+.app .panel {
+    min-width: 0;
+    padding: 20px;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 4px 20px #152d4d0a;
+}
+
+.app .stat strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 28px;
+    overflow-wrap: anywhere;
+}
+
+.app .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* Tombol */
+
+.app .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 7px;
+    background: #173a67;
+    color: #fff !important;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.app .btn:hover {
+    filter: brightness(1.08);
+}
+
+.app .btn:focus-visible {
+    outline: 3px solid #8db7ee;
+    outline-offset: 2px;
+}
+
+.app .btn.gold {
+    background: #c7a75a;
+    color: #172b45 !important;
+}
+
+.app .btn.red {
+    background: #a83232;
+    color: #fff !important;
+}
+
+/* Tabel */
+
+.app .tablewrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+.app table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.app th,
+.app td {
+    padding: 12px;
+    border-bottom: 1px solid #e7ebf1;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.app th {
+    background: #f8fafc;
+    color: #65758b;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Kolom tindakan: Edit dan Hapus tidak bertumpuk */
+
+.app .tablewrap td:last-child,
+.app .tablewrap th:last-child {
+    min-width: 190px;
+}
+
+.app .tablewrap td:last-child {
+    white-space: nowrap;
+}
+
+.app .tablewrap td:last-child form {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 8px 6px 0;
+    vertical-align: middle;
+}
+
+.app .tablewrap td:last-child .btn,
+.app .tablewrap td:last-child button {
+    width: auto;
+    min-width: 70px;
+    margin: 0;
+}
+
+/* Formulir */
+
+.app input,
+.app select,
+.app textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #d7dfeb;
+    border-radius: 7px;
+    background: #fff;
+    color: #1e293b;
+    font: inherit;
+}
+
+.app textarea {
+    resize: vertical;
+}
+
+.app input:focus,
+.app select:focus,
+.app textarea:focus {
+    border-color: #6488b7;
+    outline: 2px solid #dbeafe;
+}
+
+.app label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+}
+
+.app .formgrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 14px;
+}
+
+/* Notifikasi dan elemen tambahan */
+
+.app .alert {
+    margin-bottom: 16px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: #eaf4ec;
+}
+
+.app .alert.err {
+    background: #fff0f0;
+    color: #8b1e1e;
+}
+
+.app .quick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.app .badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background: #e8eef8;
+    font-size: 12px;
+}
+
+.app .question {
+    margin: 12px 0;
+    padding: 18px;
+    border: 1px solid #e3e8f0;
+    border-radius: 10px;
+}
+
+.app .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.app .option input {
+    width: auto;
+    margin-top: 5px;
+}
+
+.app .filelink {
+    color: #174a83;
+    text-decoration: underline;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .app .sidebar {
+        flex-basis: 205px;
+    }
+
+    .app .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .app .grid2 {
+        grid-template-columns: 1fr;
+    }
+
+    .app .content {
+        padding: 22px;
+    }
+}
+
+/* Ponsel */
+
+@media (max-width: 600px) {
+    .app .layout {
+        display: block;
+    }
+
+    .app .sidebar {
+        padding: 14px;
+    }
+
+    .app .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .app .nav a {
+        margin: 0;
+        padding: 8px 10px;
+    }
+
+    .app .content {
+        padding: 15px;
+    }
+
+    .app .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .app .stat,
+    .app .panel {
+        padding: 15px;
+    }
+
+    .app .stat strong {
+        font-size: 22px;
+    }
+
+    .app .formgrid {
+        grid-template-columns: 1fr;
+    }
+
+    .app .topbar {
+        flex-wrap: wrap;
+        padding: 14px;
+    }
+}
+
+
+/* Posisi tombol keluar pada sidebar */
+.app .sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app .nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.app .nav a[href$="logout.php"] {
+    margin-top: auto;
+}
+
+/* Footer dashboard user */
+.app .dashboard-footer {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 24px;
+    padding: 20px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 600px) {
+    .app .sidebar {
+        min-height: auto;
+    }
+
+    .app .nav {
+        flex: initial;
+    }
+
+    .app .nav a[href$="logout.php"] {
+        margin-top: 0;
+    }
+}

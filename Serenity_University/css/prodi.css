@@ -1,0 +1,301 @@
+body {
+    background-color: #F8F6F0;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #2C2C2C;
+}
+
+header {
+    background: #c7b093;
+}
+
+.main-header {
+    position: relative;
+    z-index: 999; /* Memastikan navbar selalu berada di lapisan paling atas */
+}
+
+.navbar {
+    min-height: 90px;
+    padding: 5px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand img {
+    width: 85px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.brand-text h2 {
+    margin: 0;
+    line-height: 1;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #163d67;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    font-size: 15px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #163d67;
+}
+
+.nav-menu a.active {
+    color: #163d67;
+    border-bottom: 2px solid #163d67;
+}
+
+.login-btn {
+    background: #163d67;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Hero Banner */
+.hero-section {
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('../images/wp-univ.png') no-repeat center center/cover;
+    margin: 25px auto;
+    width: 92%;
+    max-width: 1250px;
+    border-radius: 20px;
+    padding: 60px 50px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #D4AF37;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    font-size: 38px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 15px;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #E2E8F0;
+    font-family: sans-serif;
+}
+
+/* Section Title */
+.section-title-container {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.section-title-container h2 {
+    font-size: 26px;
+    color: #1A365D;
+    margin-bottom: 8px;
+}
+
+.section-title-container p {
+    font-size: 14px;
+    color: #666;
+    font-family: sans-serif;
+    margin-top: 0;
+}
+
+/* Container Grid Prodi */
+.prodi-container {
+    padding: 20px 40px 60px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.prodi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Kartu Prodi */
+.prodi-card {
+    background-color: #FDFCF7;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EAE5D9;
+    transition: transform 0.2s ease;
+}
+
+.prodi-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 170px;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Icon Bulat di atas Gambar */
+.card-icon {
+    position: absolute;
+    bottom: -18px;
+    left: 24px;
+    width: 42px;
+    height: 42px;
+    background-color: #1A365D;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border: 3px solid #FDFCF7;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.card-content {
+    padding: 25px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    color: #1A365D;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    font-family: sans-serif;
+    flex-grow: 1;
+}
+
+/* Tombol Selengkapnya */
+.detail-btn {
+    align-self: flex-start;
+    background-color: #EFE9DB;
+    color: #2C2C2C;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.detail-btn:hover {
+    background-color: #E2DAC8;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+    .prodi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .prodi-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-section {
+        padding: 40px 20px;
+    }
+    .hero-section h1 {
+        font-size: 28px;
+    }
+}
+
+/* ===== NAVBAR SERAGAM & STICKY ===== */
+html { scroll-padding-top: 90px; }
+.main-header, body > header:first-of-type {
+    position: sticky !important;
+    top: 0;
+    z-index: 9999;
+    background: #c7b093 !important;
+    box-shadow: 0 3px 14px rgba(0,0,0,.10);
+}
+.navbar {
+    min-height: 90px !important;
+    height: 90px;
+    padding: 5px 25px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.brand { display:flex !important; align-items:center !important; gap:14px !important; }
+.brand img { width:85px !important; height:75px !important; object-fit:contain !important; }
+.brand-text { display:flex !important; flex-direction:column !important; }
+.brand-text h2 { margin:0 !important; line-height:1 !important; font-family:Georgia,serif !important; font-size:28px !important; color:#163d67 !important; }
+.nav-right { display:flex !important; align-items:center !important; gap:35px !important; }
+.nav-menu { display:flex !important; align-items:center !important; gap:28px !important; }
+.nav-menu a { font-size:15px !important; color:#fff !important; font-family:Arial,sans-serif !important; text-decoration:none !important; padding-bottom:4px !important; transition:.3s !important; }
+.nav-menu a:hover, .nav-menu a.active { color:#163d67 !important; }
+.nav-menu a.active { border-bottom:2px solid #163d67 !important; }
+.login-btn {
+    background:#163d67 !important; color:#fff !important; padding:10px 18px !important;
+    border-radius:8px !important; font-size:14px !important; text-decoration:none !important;
+    display:inline-flex !important; align-items:center; gap:7px; transition:.3s !important;
+}
+.login-btn:hover { background:#102f50 !important; transform:translateY(-2px); }
+@media (max-width:650px) {
+    .navbar { height:auto !important; min-height:auto !important; padding:12px 18px !important; flex-direction:column !important; gap:12px !important; }
+    .brand img { width:65px !important; height:60px !important; }
+    .brand-text h2 { font-size:22px !important; }
+    .nav-right { flex-direction:column !important; gap:12px !important; }
+    .nav-menu { flex-wrap:wrap !important; justify-content:center !important; gap:12px 18px !important; }
+    .nav-menu a { font-size:13px !important; }
+}

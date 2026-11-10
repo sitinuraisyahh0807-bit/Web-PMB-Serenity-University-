@@ -1,0 +1,1421 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #173b5e;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   HEADER / NAVBAR
+========================================================= */
+
+header {
+    background: #c7b093;
+}
+
+.main-header {
+    position: relative;
+    z-index: 999;
+}
+
+.navbar {
+    min-height: 90px;
+    padding: 5px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand img {
+    width: 85px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.brand-text h2 {
+    margin: 0;
+    line-height: 1;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #163d67;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    font-size: 15px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #163d67;
+}
+
+.nav-menu a.active {
+    color: #163d67;
+    border-bottom: 2px solid #163d67;
+}
+
+.login-btn {
+    background: #163d67;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #102f50;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 43, 68, 0.55),
+            rgba(10, 43, 68, 0.55)
+        ),
+        url("../images/wp-univ.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    margin-left: 6%;
+    width: 600px;
+    color: white;
+}
+
+.hero-label {
+    color: #d4b996;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.hero h1 {
+    margin: 8px 0;
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.hero h2 {
+    margin-bottom: 15px;
+    color: #d4b996;
+    font: normal 25px Georgia, serif;
+}
+
+.hero-desc {
+    width: 480px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.hero-button {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-primary {
+    padding: 14px 25px;
+    background: #ceb18c;
+    color: #173b5e;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #dfc39f;
+    transform: translateY(-2px);
+}
+
+.btn-primary i {
+    margin-left: 15px;
+}
+
+.btn-secondary {
+    padding: 13px 22px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.alur-section,
+.prodi-section {
+    padding: 55px 5%;
+}
+
+.section-title {
+    text-align: center;
+    font: bold 25px Georgia, serif;
+}
+
+.title-line {
+    margin: 7px auto 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    color: #b89b77;
+}
+
+.title-line span {
+    width: 100px;
+    border-top: 1px solid #b89b77;
+}
+
+/* ================= ALUR PENDAFTARAN ================= */
+
+.alur-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 70px 5% 55px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fbf8f4 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* DEKORASI BACKGROUND */
+
+.alur-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -180px;
+    left: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(199, 176, 147, 0.16),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+.alur-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    bottom: -250px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22, 61, 103, 0.08),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ================= JUDUL ================= */
+
+.alur-heading {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 65px;
+}
+
+
+.alur-title-decoration {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+.alur-title-decoration span {
+    width: 70px;
+
+    height: 1px;
+
+    background: #c7b093;
+}
+
+
+.alur-title-decoration i {
+    color: #c7b093;
+
+    font-size: 16px;
+}
+
+
+.alur-heading h2 {
+    margin-bottom: 12px;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #163d67;
+
+    letter-spacing: 0.5px;
+}
+
+
+.alur-heading p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #64707c;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.alur-container {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* ================= CARD ================= */
+
+.alur-card {
+    position: relative;
+
+    min-height: 285px;
+
+    padding:
+        58px
+        18px
+        25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #faf7f2
+        );
+
+    border:
+        1px solid #e3d8ca;
+
+    border-radius: 14px;
+
+    overflow: visible;
+
+    box-shadow:
+        0 8px 25px
+        rgba(22, 61, 103, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.alur-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #c7b093;
+
+    box-shadow:
+        0 18px 35px
+        rgba(22, 61, 103, 0.15);
+}
+
+
+/* ================= NOMOR ================= */
+
+.alur-number {
+    position: absolute;
+
+    top: -29px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d1b994,
+            #b89b77
+        );
+
+    color: white;
+
+    border: 4px solid #ffffff;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.12);
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+
+/* ================= ICON ================= */
+
+.alur-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #163d67;
+    color: white;
+
+    box-shadow: 0 8px 18px rgba(22, 61, 103, 0.20);
+}
+
+.alur-icon i {
+    font-size: 28px;
+    color: white;
+}
+
+
+/* ================= JUDUL CARD ================= */
+
+.alur-card h3 {
+    min-height: 48px;
+
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #163d67;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.35;
+}
+
+
+/* GARIS KECIL */
+
+.alur-line {
+    width: 38px;
+
+    height: 2px;
+
+    margin:
+        13px auto
+        16px;
+
+    background: #c7b093;
+}
+
+
+/* DESKRIPSI */
+
+.alur-card p {
+    margin: 0;
+
+    color: #66717c;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+}
+
+
+/* ================= INFO ================= */
+
+.alur-info {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1100px;
+
+    margin:
+        45px auto 0;
+
+    padding:
+        18px 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(199, 176, 147, 0.12);
+
+    border:
+        1px solid
+        rgba(199, 176, 147, 0.35);
+}
+
+
+.alur-info i {
+    color: #b89b77;
+
+    font-size: 20px;
+}
+
+
+.alur-info p {
+    margin: 0;
+
+    color: #52606d;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.alur-info strong {
+    color: #163d67;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1250px) {
+
+    .alur-container {
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap:
+            55px
+            18px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .alur-section {
+        padding:
+            60px 6%
+            45px;
+    }
+
+
+    .alur-heading h2 {
+        font-size: 25px;
+    }
+
+
+    .alur-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            55px
+            18px;
+    }
+
+
+    .alur-card {
+        min-height: 260px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .alur-heading h2 {
+        font-size: 21px;
+    }
+
+
+    .alur-heading p {
+        font-size: 13px;
+    }
+
+
+    .alur-container {
+        grid-template-columns:
+            1fr;
+
+        gap: 55px;
+    }
+
+
+    .alur-card {
+        min-height: 245px;
+    }
+
+
+    .alur-info {
+        flex-direction: column;
+
+        padding: 18px;
+    }
+
+
+    .alur-info p {
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================================
+   PROGRAM STUDI
+========================================================= */
+
+.prodi-section {
+    background: #fbf8f4;
+}
+
+.prodi-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.prodi-card {
+    min-height: 140px;
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    border: 1px solid #ddd0c1;
+    border-radius: 7px;
+    background: white;
+
+    transition: 0.3s ease;
+}
+
+.prodi-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(23, 59, 94, 0.10);
+}
+
+.prodi-icon {
+    min-width: 70px;
+    height: 70px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #173f65;
+    color: white;
+
+    font-size: 29px;
+}
+
+.prodi-card h3 {
+    margin-bottom: 8px;
+    font: bold 17px Georgia, serif;
+}
+
+.prodi-card p {
+    color: #555;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.prodi-card a {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 11px;
+    color: #b0916e;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    width: 90%;
+    margin: 0 auto 30px;
+    padding: 22px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #143f65;
+    color: white;
+
+    border-radius: 7px;
+}
+
+.cta-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-left img {
+    width: 75px;
+}
+
+.cta h2 {
+    margin-bottom: 6px;
+    font: 20px Georgia, serif;
+}
+
+.cta p {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #f4eee7;
+}
+
+.footer-content {
+    padding: 30px 6%;
+
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 50px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand img {
+    width: 60px;
+}
+
+.footer-brand h2 {
+    font: bold 18px Georgia, serif;
+}
+
+footer h4 {
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+}
+
+footer p,
+footer a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.copyright {
+    padding: 12px 6%;
+    border-top: 1px solid #ddd1c5;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   PROGRAM AKADEMIK
+========================================================= */
+
+.akademik-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 500px;
+
+    margin: 30px 0;
+
+    padding: 70px 5%;
+
+    background-image:
+        url("../images/program-akademik.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+
+/* OVERLAY */
+
+.akademik-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(12, 48, 125, 0.45);
+
+    z-index: 1;
+}
+
+
+/* CONTENT */
+
+.akademik-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* TITLE */
+
+.akademik-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* TITLE LINE */
+
+.akademik-title-line {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 12px auto 45px;
+}
+
+.akademik-title-line span {
+    width: 70px;
+
+    height: 2px;
+
+    background: #5b8cff;
+}
+
+.akademik-title-line i {
+    color: #ffffff;
+
+    background: #2864e8;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+}
+
+
+/* CONTAINER */
+
+.akademik-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+
+/* CARD */
+
+.akademik-card {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 65px 28px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(31, 69, 157, 0.92),
+            rgba(18, 49, 118, 0.95)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.akademik-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(0, 0, 0, 0.28);
+}
+
+
+/* ICON */
+
+.akademik-icon {
+    position: absolute;
+
+    top: -38px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 78px;
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #3d72ff,
+            #1d50d6
+        );
+
+    border: 4px solid #ffffff;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.25);
+}
+
+.akademik-icon i {
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+
+/* NAMA PROGRAM */
+
+.akademik-card h3 {
+    margin: 8px 0 10px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+/* LINE */
+
+.akademik-line {
+    width: 35px;
+
+    height: 2px;
+
+    margin: 0 auto 18px;
+
+    background: #4f82ff;
+}
+
+
+/* DESKRIPSI */
+
+.akademik-card p {
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin: 0 auto 22px;
+
+    max-width: 260px;
+}
+
+
+/* BUTTON */
+
+.akademik-card a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #6f9cff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.akademik-card a:hover {
+    color: #ffffff;
+
+    gap: 13px;
+}
+
+.akademik-card a i {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+
+/* LAPTOP / TABLET */
+
+@media (max-width: 1200px) {
+
+    .alur-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 45px 18px;
+    }
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .akademik-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 55px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .nav-right {
+        gap: 20px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-content,
+    .hero-desc {
+        width: 85%;
+    }
+
+    .prodi-container {
+        grid-template-columns: 1fr;
+    }
+
+    .alur-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cta {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: auto;
+
+        padding: 12px 18px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .brand img {
+        width: 65px;
+        height: 60px;
+    }
+
+    .brand-text h2 {
+        font-size: 22px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero-content {
+        margin-left: 7%;
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-desc {
+        width: 95%;
+    }
+
+
+    /* ALUR */
+
+    .alur-section {
+        padding: 60px 20px 50px;
+    }
+
+    .alur-section .section-title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .alur-section .title-line {
+        margin-bottom: 45px;
+    }
+
+    .alur-section .title-line span {
+        width: 60px;
+    }
+
+    .alur-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .alur-card {
+        min-height: 270px;
+    }
+
+
+    /* AKADEMIK */
+
+    .akademik-section {
+        width: 100%;
+
+        min-height: 500px;
+
+        margin: 30px 0;
+
+        padding: 70px 5%;
+
+        background-image:
+            url("../images/program-akademik.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border-radius: 18px;
+
+        overflow: hidden;
+    }
+
+    .akademik-title {
+        font-size: 25px;
+    }
+
+    .akademik-container {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .akademik-card {
+        min-height: auto;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+
+/* MOBILE KECIL */
+
+@media (max-width: 400px) {
+
+    .brand-text h2 {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .alur-card h3 {
+        font-size: 15px;
+    }
+
+}
+
+/* ===== NAVBAR SERAGAM & STICKY ===== */
+html { scroll-padding-top: 90px; }
+.main-header, body > header:first-of-type {
+    position: sticky !important;
+    top: 0;
+    z-index: 9999;
+    background: #c7b093 !important;
+    box-shadow: 0 3px 14px rgba(0,0,0,.10);
+}
+.navbar {
+    min-height: 90px !important;
+    height: 90px;
+    padding: 5px 25px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.brand { display:flex !important; align-items:center !important; gap:14px !important; }
+.brand img { width:85px !important; height:75px !important; object-fit:contain !important; }
+.brand-text { display:flex !important; flex-direction:column !important; }
+.brand-text h2 { margin:0 !important; line-height:1 !important; font-family:Georgia,serif !important; font-size:28px !important; color:#163d67 !important; }
+.nav-right { display:flex !important; align-items:center !important; gap:35px !important; }
+.nav-menu { display:flex !important; align-items:center !important; gap:28px !important; }
+.nav-menu a { font-size:15px !important; color:#fff !important; font-family:Arial,sans-serif !important; text-decoration:none !important; padding-bottom:4px !important; transition:.3s !important; }
+.nav-menu a:hover, .nav-menu a.active { color:#163d67 !important; }
+.nav-menu a.active { border-bottom:2px solid #163d67 !important; }
+.login-btn {
+    background:#163d67 !important; color:#fff !important; padding:10px 18px !important;
+    border-radius:8px !important; font-size:14px !important; text-decoration:none !important;
+    display:inline-flex !important; align-items:center; gap:7px; transition:.3s !important;
+}
+.login-btn:hover { background:#102f50 !important; transform:translateY(-2px); }
+@media (max-width:650px) {
+    .navbar { height:auto !important; min-height:auto !important; padding:12px 18px !important; flex-direction:column !important; gap:12px !important; }
+    .brand img { width:65px !important; height:60px !important; }
+    .brand-text h2 { font-size:22px !important; }
+    .nav-right { flex-direction:column !important; gap:12px !important; }
+    .nav-menu { flex-wrap:wrap !important; justify-content:center !important; gap:12px 18px !important; }
+    .nav-menu a { font-size:13px !important; }
+}
